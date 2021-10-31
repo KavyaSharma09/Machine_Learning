@@ -29,7 +29,7 @@
                 </div>
                 <div class="card-body">
                     <div class="col-12" style="text-align: center">
-                        <h5>Fill in the details to predict the price of the car you want to sell</h5>
+                        <h5>Fill in the details to predict the price of the car you want to sell </h5>
                     </div>
                     <br>
                     <form method="post" accept-charset="utf-8" name="Modelform">
@@ -43,30 +43,33 @@
                             </select>
                         </div>
                         <div class="col-md-10 form-group" style="text-align: left">
-                            <label><b>Select the model:</b> </label><br>
+                            <label><b>Select the model</b> </label><br>
                             <select class="selectpicker form-control" id="car_models" name="car_models" required="1">
+                            {% for model in car_models %}
+                                <option value="{{ model }}">car_model</option>
+                                {% endfor %}
                             </select>
                         </div>
                         <div class="col-md-10 form-group" style="text-align: left">
-                            <label><b>Select Year of Purchase:</b> </label><br>
+                            <label><b>Select Year of Purchase</b> </label><br>
                             <select class="selectpicker form-control" id="year" name="year" required="1">
                                 {% for year in years %}
-                                <option value="{{ year }}">{{ year }}</option>
+                                <option value="{{ year }}">year_of_purchase</option>
                                 {% endfor %}
                             </select>
                         </div>
                         <div class="col-md-10 form-group" style="text-align: left">
-                            <label><b>Select the Fuel Type:</b> </label><br>
+                            <label><b>Select the Fuel Type</b> </label><br>
                             <select class="selectpicker form-control" id="fuel_type" name="fuel_type" required="1">
                                 {% for fuel in fuel_types %}
-                                <option value="{{ fuel }}">{{ fuel }}</option>
+                                <option value="{{ fuel }}">fuel_type</option>
                                 {% endfor %}
                             </select>
                         </div>
                         <div class="col-md-10 form-group" style="text-align: left">
-                            <label><b>Enter the Number of Kilometres that the car has travelled:</b> </label><br>
+                            <label><b>Enter the Distance Travelled by the Car (in km)</b> </label><br>
                             <input type="text" class="form-control" id="kilo_driven" name="kilo_driven"
-                                placeholder="Enter the kilometres driven " required="true">
+                                placeholder="distance_travelled " required="true">
                         </div>
                         <div class="col-md-10 form-group" style="text-align: center">
                             <button class="btn btn-primary form-control" onclick="send_data()">Predict Price</button>
