@@ -95,7 +95,7 @@
             car_model.value = "";
             car_model.innerHTML = "";
             {% for company in companies %}
-            if (company.value == "{{ company }}") {
+            if (company.value == "company_name") {
                 {% for model in car_models %}
                 {% if company in model %}
 
