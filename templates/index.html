@@ -38,7 +38,7 @@
                             <select class="selectpicker form-control" id="company" name="company" required="1"
                                 onchange="load_car_models(this.id,'car_models')">
                                 {% for company in companies %}
-                                <option value="{{ company }}">company_name</option>
+                                <option value="{{ company }}">{{ company }}</option>
                                 {% endfor %}
                             </select>
                         </div>
@@ -46,7 +46,7 @@
                             <label><b>Select the model</b> </label><br>
                             <select class="selectpicker form-control" id="car_models" name="car_models" required="1">
                             {% for model in car_models %}
-                                <option value="{{ model }}">car_model</option>
+                                <option value="{{ model }}">{{ model }}</option>
                                 {% endfor %}
                             </select>
                         </div>
@@ -54,7 +54,7 @@
                             <label><b>Select Year of Purchase</b> </label><br>
                             <select class="selectpicker form-control" id="year" name="year" required="1">
                                 {% for year in years %}
-                                <option value="{{ year }}">year_of_purchase</option>
+                                <option value="{{ year }}">{{ year }}</option>
                                 {% endfor %}
                             </select>
                         </div>
@@ -62,7 +62,7 @@
                             <label><b>Select the Fuel Type</b> </label><br>
                             <select class="selectpicker form-control" id="fuel_type" name="fuel_type" required="1">
                                 {% for fuel in fuel_types %}
-                                <option value="{{ fuel }}">fuel_type</option>
+                                <option value="{{ fuel }}">{{ fuel }}</option>
                                 {% endfor %}
                             </select>
                         </div>
@@ -95,7 +95,7 @@
             car_model.value = "";
             car_model.innerHTML = "";
             {% for company in companies %}
-            if (company.value == "company_name") {
+            if (company.value == "{{ company }}") {
                 {% for model in car_models %}
                 {% if company in model %}
 
