@@ -1,11 +1,11 @@
-# ml_lr
+# Machine_Learning_Linear_Regrssion
 ML project created using linear regression for prediction
-# Car Price Predictor
+# Sello | Car Price Predictor
 
 
 <img src="/demo.png">
 
-## Project link: https://trehan-ml.herokuapp.com/
+## Project link: https://kavya-sharma-ml-sello.herokuapp.com/
 
 # Aim
 
@@ -38,11 +38,11 @@ And you are good to go.
 ## How this project does?
 
 1. First of all the data was scraped from Quikr.com (https://quikr.com) 
-Link for data: https://github.com/trehansangpriya/ml/blob/master/quikr_car.csv
+Link for data: https://github.com/KavyaSharma09/Machine_Learning/blob/main/quikr_car.csv
 2. The data was cleaned (it was super unclean :( ) and analysed.
 
 3. Then a Linear Regression model was built on top of it which had 0.92 R2_score.
 
-Link for notebook: https://github.com/trehansangpriya/ml/blob/master/Quikr%20Analysis.ipynb
+Link for notebook: https://github.com/KavyaSharma09/Machine_Learning/blob/main/Quikr%20Analysis.ipynb
 
 4. This project was given the form of an website built on Flask where we used the Linear Regression model to perform predictions.
